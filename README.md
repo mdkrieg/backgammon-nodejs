@@ -3,6 +3,7 @@
 
 ## Intended additions
 [ ] Implement different board theme
+
 [ ] Implement hover style and move hints
 
 
