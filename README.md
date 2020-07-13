@@ -1,3 +1,11 @@
+# MDKrieg fork
+07/13/2020
+
+## Intended additions
+[ ] Implement different board theme
+[ ] Implement hover style and move hints
+
+
 # backgammon.js [![Build Status](https://travis-ci.org/quasoft/backgammonjs.svg?branch=master)](https://travis-ci.org/quasoft/backgammonjs)
 
 ### Extensible multiplayer backgammon game written in JavaScript
