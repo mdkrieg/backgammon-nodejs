@@ -2,9 +2,18 @@
 07/13/2020
 
 ## Intended additions
-[ ] - Implement different board theme
+- Implement different board theme
+    - I like this one from codepen: https://codepen.io/AdventureBear/pen/wBNaBP
+    - Saved in app/browser/css3-backgammon-board
+- Customize and polish UI
+    - Hover style on clickable items
+    - Show move hints
+    - Update move mechanic to click-on-destination
+    - Show double dice
+    - Show upper header by default
+    - Add some log-style status output to header
+- Add email/text link functionality
 
-[ ] - Implement hover style and move hints
 
 
 # backgammon.js [![Build Status](https://travis-ci.org/quasoft/backgammonjs.svg?branch=master)](https://travis-ci.org/quasoft/backgammonjs)
