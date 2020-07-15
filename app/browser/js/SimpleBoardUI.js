@@ -9,7 +9,7 @@ require('../bower_components/oh-snap/ohsnap.js');
 var BootstrapDialog = require('../bower_components/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js');
 
 const blockBrowserContext = 0;// 0 - allow right click | 1 - block right click
-const piecesStackAndLabel = 1;// 0 - pieces squish | 1 - pieces stack (text on last piece)
+//const piecesStackAndLabel = 1;// 0 - pieces squish | 1 - pieces stack (text on last piece)
 
 /**
  * Contains graphical user interface and functionality for moving pieces
@@ -395,7 +395,7 @@ function SimpleBoardUI(client) {
   this.compactElement = function (element, alignment) {
     console.log("compactElement------");
     var elementHeight = element.height();
-    var itemCount = element.children(".piece").length - 1;//added .piece attribute to accommodate border-style background div
+    var itemCount = element.children(".piece").length;//added .piece attribute to accommodate border-style background div
     if (itemCount > 0) {
       var firstItem = element.children(".piece").first();//added .piece attribute to accommodate border-style background div
       var itemHeight = firstItem.width();
@@ -425,7 +425,7 @@ function SimpleBoardUI(client) {
         
         $(this).css(alignment, "0");
         $(this).css("margin-" + alignment, self.toFixedDown(marginPercent, 2) + "%");
-
+        
         $(this).css(negAlignment, "inherit");
         $(this).css("margin-" + negAlignment, "inherit");
       });
