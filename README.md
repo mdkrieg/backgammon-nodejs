@@ -8,11 +8,13 @@
 - Customize and polish UI
     - Hover style on clickable items
     - Show move hints
+    - Add screenshots to rule selector buttons
     - Update move mechanic to click-on-destination
     - Show double dice
     - Show upper header by default
     - Add some log-style status output to header
 - Add email/text link functionality
+- Implement user management
 
 
 
@@ -24,7 +26,6 @@ Current version: 0.6
 
 See [CHANGELOG](CHANGELOG.md) for recent changes.
 
-**Volunteer needed to host live DEMO.**
 
 ## Features:
 
