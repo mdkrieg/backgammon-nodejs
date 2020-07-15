@@ -422,8 +422,16 @@ body {
 .board {
   /*background-color: #5E4733*/;
   /*E8D1A5*/
-  /*background-color: #fff1dd;*/
-  background-color: #fff1dd;
+  /*background-color: #fff1dd;*
+  background-color: #fff1dd;*/
+  
+  width: 610px;
+  height: 480px;
+  position: relative;
+  background-color: #335533;
+  box-sizing: border-box;
+  border: 10px solid black;
+  border-radius: 10px;
 }
 
 .frame {
@@ -441,23 +449,55 @@ body {
 }
 
 .row0 .point.odd {
-  /*background-color: #D8C3A3;*/
-  background-image: url(../images/row1-triangle-light.gif);
+  /*background-color: #D8C3A3;*
+  background-image: url(../images/row1-triangle-light.gif);*/
+	width: 0px; 
+	height: 0px; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 195px solid green;
+  border-bottom: 0px solid;
+  display: inline;
+  float: left;
 }
 
 .row0 .point.even {
-  /*background-color: #B58863;*/
-  background-image: url(../images/row1-triangle-dark.gif);
+  /*background-color: #B58863;*
+  background-image: url(../images/row1-triangle-dark.gif);*/
+	width: 0px; 
+	height: 0px; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 195px solid #044;
+  border-bottom: 0px solid;
+  display: inline;
+  float: left;
 }
 
 .row1 .point.odd {
-  /*background-color: #D8C3A3;*/
-  background-image: url(../images/row2-triangle-light.gif);
+  /*background-color: #D8C3A3;*
+  background-image: url(../images/row2-triangle-light.gif);*/
+	width: 0px; 
+	height: 0px; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 195px solid green;
+  border-top: 0px solid;
+  display: inline;
+  float: left;
 }
 
 .row1 .point.even {
-  /*background-color: #B58863;*/
-  background-image: url(../images/row2-triangle-dark.gif);
+  /*background-color: #B58863;*
+  background-image: url(../images/row2-triangle-dark.gif);*/
+	width: 0px; 
+	height: 0px; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 195px solid #044;
+  border-top: 0px solid;
+  display: inline;
+  float: left;
 }
 
 .piece {
