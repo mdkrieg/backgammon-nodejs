@@ -8,6 +8,9 @@ var model = require('../../../lib/model.js');
 require('../bower_components/oh-snap/ohsnap.js');
 var BootstrapDialog = require('../bower_components/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js');
 
+const blockBrowserContext = 0;// 0 - allow right click | 1 - block right click
+const piecesStackAndLabel = 1;// 0 - pieces squish | 1 - pieces stack (text on last piece)
+
 /**
  * Contains graphical user interface and functionality for moving pieces
  * @constructor
@@ -33,7 +36,6 @@ function SimpleBoardUI(client) {
     this.container = $('#' + this.client.config.containerID);
     this.container.append($('#tmpl-board').html());
     this.container.append($('<div id="ohsnap"></div>'));
-    
     this.board = $('#board');
     this.fields = [];
     for (var i = 0; i < 4; i++) {
@@ -273,8 +275,9 @@ function SimpleBoardUI(client) {
       var pointElem = this.getPointElem(pos);
 
       $(document).on('contextmenu', pointElem, function(e){
-        // Block browser menu
-        return false;
+        // Block browser menu if enabled
+        if (blockBrowserContext) return false;
+        return true;
       });
       pointElem.unbind('mousedown');
       pointElem.mousedown(self, self.handlePointClick);
@@ -287,8 +290,9 @@ function SimpleBoardUI(client) {
       console.log(barElem);
       
       $(document).on('contextmenu', barElem, function(e){
-        // Block browser menu
-        return false;
+        // Block browser menu if enabled
+        if (blockBrowserContext) return false;
+        return true;
       });
       
       barElem.unbind('mousedown');
@@ -297,7 +301,7 @@ function SimpleBoardUI(client) {
   };
 
   this.createPoint = function (field, pos, type) {
-    var pointElem = $('<div id="point' + pos + '" class="point ' + type + '"></div>');
+    var pointElem = $('<div id="point' + pos + '" class="point ' + type + '"><div class="shape"></div></div>');
     pointElem.data('position', pos);
     field.append(pointElem);
   };
@@ -389,11 +393,11 @@ function SimpleBoardUI(client) {
    * @param {string} alignment - Alignment of pieces - 'top' or 'bottom', depending on within which side of the board the piece is
    */
   this.compactElement = function (element, alignment) {
+    console.log("compactElement------");
     var elementHeight = element.height();
-    var itemCount = element.children().length;
-
+    var itemCount = element.children(".piece").length - 1;//added .piece attribute to accommodate border-style background div
     if (itemCount > 0) {
-      var firstItem = element.children().first();
+      var firstItem = element.children(".piece").first();//added .piece attribute to accommodate border-style background div
       var itemHeight = firstItem.width();
       var ratio = 100;
       var overflow = (itemHeight * itemCount) - elementHeight;
@@ -415,7 +419,7 @@ function SimpleBoardUI(client) {
       }
       
       var self = this;
-      element.children().each(function(i) {
+      element.children(".piece").each(function(i) { //added .piece attribute to accommodate border-style background div
         var marginPercent = ratio * i;
         var negAlignment = (alignment === 'top') ? 'bottom' : 'top';
         

@@ -21,10 +21,6 @@ html, body,
   height: 100%;
 }
 
-.board {
-  height: 99%;
-}
-
 .pane {
   width: 45%;
 }
@@ -121,6 +117,10 @@ html, body,
 /* Piece text */
 .piece {
   vertical-align: middle;
+}
+
+.piece .image:hover {
+  opacity:60%;
 }
 
 .piece .image:before {
@@ -418,17 +418,20 @@ body {
   margin-right: 5px;
 }
 
+
 /* Board style */
-.board {
-  /*background-color: #5E4733*/;
+.board{
+  position: relative;
+  background-color: #335533;
+}
+.cf {
+  /*background-color: #5E4733*/
   /*E8D1A5*/
   /*background-color: #fff1dd;*
   background-color: #fff1dd;*/
   
   width: 610px;
-  height: 480px;
-  position: relative;
-  background-color: #335533;
+  height: 520px;
   box-sizing: border-box;
   border: 10px solid black;
   border-radius: 10px;
@@ -448,56 +451,45 @@ body {
   background-repeat: no-repeat;
 }
 
-.row0 .point.odd {
-  /*background-color: #D8C3A3;*
-  background-image: url(../images/row1-triangle-light.gif);*/
-	width: 0px; 
-	height: 0px; 
+.point .shape {
+  position:absolute;
+  left:0;
+  width: 100%;
 	border-left: 20px solid transparent;
 	border-right: 20px solid transparent;
+  /*display: inline;
+  float: left;*/
+}
+.row0 .point.odd .shape{
+  /*background-image: url(../images/row1-triangle-light.gif);*/
 	border-top: 195px solid green;
   border-bottom: 0px solid;
-  display: inline;
-  float: left;
 }
 
-.row0 .point.even {
-  /*background-color: #B58863;*
-  background-image: url(../images/row1-triangle-dark.gif);*/
-	width: 0px; 
-	height: 0px; 
-	border-left: 20px solid transparent;
-	border-right: 20px solid transparent;
+.row0 .point.even .shape {
+  /*background-image: url(../images/row1-triangle-dark.gif);*/
 	border-top: 195px solid #044;
   border-bottom: 0px solid;
-  display: inline;
-  float: left;
 }
 
-.row1 .point.odd {
-  /*background-color: #D8C3A3;*
-  background-image: url(../images/row2-triangle-light.gif);*/
-	width: 0px; 
-	height: 0px; 
-	border-left: 20px solid transparent;
-	border-right: 20px solid transparent;
+.row1 .point.odd .shape {
+  /*background-image: url(../images/row2-triangle-light.gif);*/
 	border-bottom: 195px solid green;
   border-top: 0px solid;
-  display: inline;
-  float: left;
 }
 
-.row1 .point.even {
-  /*background-color: #B58863;*
-  background-image: url(../images/row2-triangle-dark.gif);*/
-	width: 0px; 
-	height: 0px; 
-	border-left: 20px solid transparent;
-	border-right: 20px solid transparent;
+.row1 .point.even .shape {
+  /*background-image: url(../images/row2-triangle-dark.gif);*/
 	border-bottom: 195px solid #044;
   border-top: 0px solid;
-  display: inline;
-  float: left;
+}
+
+
+.row0 .point .shape {
+  top:0;
+}
+.row1 .point .shape {
+  bottom:0;
 }
 
 .piece {

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
   <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="style/backgammon.css">
   <link rel="stylesheet" type="text/css" href="style/ribbons.css">
@@ -54,7 +54,7 @@
       <div id="dice" style="display: none"></div>
     </div>
   </script>
-  
+    
   <script type="text/x-mustache" id="tmpl-rule-selector-item">
     <label class="btn btn-default btn-lg {{active}}">
       <input type="radio" name="rule-selected" value="{{name}}" autocomplete="off" {{checked}}> {{title}}
@@ -121,7 +121,7 @@
   <table id="game-view" width="100%" height="100%" style="display: none">
   <tr>
     <td height="100%">
-      <div id="backgammon"></div>
+      <div id="backgammon" class="board"></div>
     </td>
   </tr>
   </table>
@@ -140,6 +140,13 @@
             <input id="challenge-link" type="text" class="form-control" value="test1234">
             <span class="input-group-btn">
               <button class="btn btn-default btn-copy" type="button" data-clipboard-target="#challenge-link">Copy</button>
+            </span>
+          </div><br>
+          <span>Email <span class="hidden-xs">address</span>:</span>
+          <div class="input-group input-group-lg">
+            <input id="challenge-email" type="text" class="form-control" value="test1234@mailinator.com">
+            <span class="input-group-btn">
+              <button class="btn btn-default btn-email" type="button" data-email-target="#challenge-email">Send</button>
             </span>
           </div>
         </div>
