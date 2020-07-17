@@ -13,6 +13,12 @@
   <script type="text/x-mustache" id="tmpl-board">
     <div id="frame-top" class="frame"></div>
     <div class="board cf">
+      <div class="action-panel">
+        <button id="btn-roll" class="btn btn-primary btn-lg action" style="display: none" title="Roll dice">Roll</button>
+        <button id="btn-confirm" class="btn btn-primary btn-lg action" style="display: none" title="Confirm moves made">Confirm</button>
+        <button id="btn-undo" class="btn btn-default btn-lg action" style="display: none" title="Undo moves made">Undo</button>
+        <div id="dice" style="display: none"></div>
+      </div>
       <div id="pane-left" class="pane">
         <div id="field0" class="field row0 col0"></div>
         <div id="field1" class="field row1 col0"></div>
@@ -26,7 +32,8 @@
           <td valign="top">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar" aria-expanded="false" title="Show/Hide game menu">
               <span class="sr-only">Toggle game menu</span>
-              <span class="glyphicon glyphicon-menu-hamburger"></span>
+              <!--span class="glyphicon glyphicon-menu-hamburger"></span>-->
+              <img src="./images/menu-rounded-solid.svg" style="width:50%;min-height:30px;">
             </button>
           </td>
         </tr>
@@ -46,12 +53,7 @@
         </div>
       </div>
     </div>
-    <div id="frame-bottom" class="frame"></div>
-    <div class="action-panel">
-      <button id="btn-roll" class="btn btn-primary btn-lg action" style="display: none" title="Roll dice">Roll</button>
-      <button id="btn-confirm" class="btn btn-primary btn-lg action" style="display: none" title="Confirm moves made">Confirm</button>
-      <button id="btn-undo" class="btn btn-default btn-lg action" style="display: none" title="Undo moves made">Undo</button>
-      <div id="dice" style="display: none"></div>
+    <div id="frame-bottom" class="frame">
     </div>
   </script>
     
@@ -113,6 +115,13 @@
           <li><a id="menu-undo" href="#" title="Undo moves made"><span class="glyphicon glyphicon-repeat"></span>Undo</a></li>
           <li><a id="menu-close" href="#" data-toggle="collapse" data-target=".navbar" title="Close game menu"><span class="glyphicon glyphicon-remove"></span>Close</a></li>
         </ul>
+        
+        <label style= "background-color:#DDD; color:#000; font-family:verdana;">Color Scheme: </label>
+        <select id="select-scheme" onchange="document.body.className = this.value;"> 
+          <option value="" selected>Classic</option>
+          <option value="scheme1">Scheme 1</option>
+          <option value="scheme2">Moss</option>
+        </select>
       </div>
     </div>
   </nav>

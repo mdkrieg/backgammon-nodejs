@@ -8,7 +8,7 @@ var model = require('../../../lib/model.js');
 require('../bower_components/oh-snap/ohsnap.js');
 var BootstrapDialog = require('../bower_components/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js');
 
-const blockBrowserContext = 0;// 0 - allow right click | 1 - block right click
+const blockBrowserContext = 1;// 0 - allow right click | 1 - block right click
 //const piecesStackAndLabel = 1;// 0 - pieces squish | 1 - pieces stack (text on last piece)
 
 /**

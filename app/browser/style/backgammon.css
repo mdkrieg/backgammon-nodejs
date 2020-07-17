@@ -403,7 +403,7 @@ body {
   padding: 0;
   background-color: #ffffff;
   border: none;
-  border-radius: 0;  
+  border-radius: 5px;
 }
 
 .navbar-toggle .glyphicon {
@@ -422,24 +422,27 @@ body {
 /* Board style */
 .board{
   position: relative;
-  background-color: #335533;
+  background-color: #FFF1DD;
 }
 .cf {
   /*background-color: #5E4733*/
   /*E8D1A5*/
   /*background-color: #fff1dd;*
   background-color: #fff1dd;*/
-  
+  background-color: #FFF1DD;
+  margin-left:10px;
   width: 610px;
   height: 520px;
   box-sizing: border-box;
-  border: 10px solid black;
+  border: 10px solid #5e4733;
   border-radius: 10px;
+  margin:auto;
 }
 
+/*
 .frame {
   background-color: #5e4733;
-}
+}*/
 
 .bar {
   background: #5e4733 url(../images/v-line.gif) repeat-y center center;
@@ -462,28 +465,71 @@ body {
 }
 .row0 .point.odd .shape{
   /*background-image: url(../images/row1-triangle-light.gif);*/
-	border-top: 195px solid green;
+	border-top: 195px solid #D9C2A3;
   border-bottom: 0px solid;
 }
 
 .row0 .point.even .shape {
   /*background-image: url(../images/row1-triangle-dark.gif);*/
-	border-top: 195px solid #044;
+	border-top: 195px solid #B58763;
   border-bottom: 0px solid;
 }
 
 .row1 .point.odd .shape {
   /*background-image: url(../images/row2-triangle-light.gif);*/
-	border-bottom: 195px solid green;
+	border-bottom: 195px solid #D9C2A3;
   border-top: 0px solid;
 }
 
 .row1 .point.even .shape {
   /*background-image: url(../images/row2-triangle-dark.gif);*/
-	border-bottom: 195px solid #044;
+	border-bottom: 195px solid #B58763;
   border-top: 0px solid;
 }
+/* ----------- BEGIN COLOR SCHEMES ------------- */
 
+    /* ----------- SCHEME 1 ------------- */
+body.scheme1 .point.odd .shape{
+  border-bottom-color: #440;
+  border-top-color: #440;
+}
+
+body.scheme1 .point.even .shape{
+  border-bottom-color: #844;
+  border-top-color: #844;
+}
+body.scheme1 .bar {
+  background: #733;
+}
+body.scheme1 .board{
+  background-color: #99F;
+}
+body.scheme1 .cf{
+  background-color: #CCC;
+  border-color: #733;
+}
+
+    /* ----------- SCHEME 2 ------------- */
+body.scheme2 .point.odd .shape{
+  border-bottom-color: green;
+  border-top-color: green;
+}
+
+body.scheme2 .point.even .shape{
+  border-bottom-color: #044;
+  border-top-color: #044;
+}
+body.scheme2 .bar {
+  background: #121;
+}
+body.scheme2 .board{
+  background-color: #333;
+}
+body.scheme2 .cf{
+  background-color: #353;
+  border-color: #121;
+}
+/* ----------- END COLOR SCHEMES ------------- */
 
 .row0 .point .shape {
   top:0;
