@@ -6,7 +6,9 @@
 var $ = require('jquery');
 var model = require('../../../lib/model.js');
 require('../bower_components/oh-snap/ohsnap.js');
-var BootstrapDialog = require('../bower_components/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js');
+//var BootstrapDialog = require('../bower_components/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js');
+// bootstrap3-dialog wasn't working
+var BootstrapDialog = require('../node_modules/bootstrap4-dialog/dist/js/bootstrap-dialog.min.js');
 
 const blockBrowserContext = 1;// 0 - allow right click | 1 - block right click
 //const piecesStackAndLabel = 1;// 0 - pieces squish | 1 - pieces stack (text on last piece)
@@ -231,7 +233,7 @@ function SimpleBoardUI(client) {
       // Ask player if they want to resign from current game only
       // or abandon the whole match
       $('.navbar').collapse('hide');
-      
+      console.log(BootstrapDialog);
       BootstrapDialog.show({
           title: 'Resign from game or match?',
           type: BootstrapDialog.TYPE_DEFAULT,
@@ -393,7 +395,6 @@ function SimpleBoardUI(client) {
    * @param {string} alignment - Alignment of pieces - 'top' or 'bottom', depending on within which side of the board the piece is
    */
   this.compactElement = function (element, alignment) {
-    console.log("compactElement------");
     var elementHeight = element.height();
     var itemCount = element.children(".piece").length;//added .piece attribute to accommodate border-style background div
     if (itemCount > 0) {
