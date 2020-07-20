@@ -237,7 +237,7 @@ function SimpleBoardUI(client) {
       BootstrapDialog.show({
           title: 'Resign from game or match?',
           type: BootstrapDialog.TYPE_DEFAULT,
-          closable: true,
+          closable: false,
           cssClass: 'resign-dialog',
           buttons: [
             {
@@ -371,8 +371,8 @@ function SimpleBoardUI(client) {
 
   this.createPiece = function (parentElem, piece, count) {
     var pieceTypeClass = piece.type === model.PieceType.WHITE ? 'white' : 'black';
-
-    var pieceElem = $('<div id="piece' + piece.id + '" class="piece ' + pieceTypeClass + '"><div class="image">&nbsp;</div></div>');
+    var myPiece = this.client.player.currentPieceType === piece.type ? ' friendly-piece' : ''; // class to identify user's pieces
+    var pieceElem = $('<div id="piece' + piece.id + '" class="piece ' + pieceTypeClass + myPiece + '"><div class="image">&nbsp;</div></div>');
     pieceElem.data('piece', piece);
 
     parentElem.append(pieceElem);
