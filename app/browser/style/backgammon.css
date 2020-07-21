@@ -355,10 +355,6 @@ body {
   background-color: #FFF1DD;
 }
 .cf {
-  /*background-color: #5E4733*/
-  /*E8D1A5*/
-  /*background-color: #fff1dd;*
-  background-color: #fff1dd;*/
   background-color: #FFF1DD;
   margin-left:10px;
   width: 610px;
@@ -369,117 +365,45 @@ body {
   margin:auto;
 }
 
-/*
-.frame {
-  background-color: #5e4733;
-}*/
-
 .bar {
   background: #5e4733 url(../images/v-line.gif) repeat-y center center;
 }
 
-.point.odd,
-.point.even {
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-
 .point .shape {
-  position:absolute;
-  left:0;
   width: 100%;
-	border-left: 20px solid transparent;
-	border-right: 20px solid transparent;
-  /*display: inline;
-  float: left;*/
+  height: 100%;
 }
-.row0 .point.odd .shape{
-  /*background-image: url(../images/row1-triangle-light.gif);*/
-	border-top: 195px solid #D9C2A3;
-  border-bottom: 0px solid;
-}
+.row0 .point .shape{padding-bottom:20px;}
+.row1 .point .shape{padding-top:20px;}
+.point.odd .shape svg path{   fill: #D9C2A3;}
+.point.even .shape svg path{  fill: #B58763;}
 
-.row0 .point.even .shape {
-  /*background-image: url(../images/row1-triangle-dark.gif);*/
-	border-top: 195px solid #B58763;
-  border-bottom: 0px solid;
-}
-
-.row1 .point.odd .shape {
-  /*background-image: url(../images/row2-triangle-light.gif);*/
-	border-bottom: 195px solid #D9C2A3;
-  border-top: 0px solid;
-}
-
-.row1 .point.even .shape {
-  /*background-image: url(../images/row2-triangle-dark.gif);*/
-	border-bottom: 195px solid #B58763;
-  border-top: 0px solid;
-}
 /* ----------- BEGIN COLOR SCHEMES ------------- */
 
     /* ----------- SCHEME 1 ------------- */
-body.scheme1 .point.odd .shape{
-  border-bottom-color: #222;
-  border-top-color: #222;
-}
-
-body.scheme1 .point.even .shape{
-  border-bottom-color: #999;
-  border-top-color: #999;
-}
-body.scheme1 .bar {
-  background: #DDD;
-}
-body.scheme1 .board{
-  background-color: #AAC;
-}
-body.scheme1 .cf{
-  background-color: #FFF;
-  border-color: #222;
-}
+body.scheme1 .point.odd .shape svg path{  fill: #222;}
+body.scheme1 .point.even .shape svg path{ fill: #D22;}
+body.scheme1 .bar {                 background: #555;}
+body.scheme1 .board{          background-color: #888;}
+body.scheme1 .cf{             background-color: #DDD;
+                                  border-color: #111;}
 
     /* ----------- SCHEME 2 ------------- */
-body.scheme2 .point.odd .shape{
-  border-bottom-color: green;
-  border-top-color: green;
-}
-
-body.scheme2 .point.even .shape{
-  border-bottom-color: #044;
-  border-top-color: #044;
-}
-body.scheme2 .bar {
-  background: #121;
-}
-body.scheme2 .board{
-  background-color: #333;
-}
-body.scheme2 .cf{
-  background-color: #353;
-  border-color: #121;
-}
+body.scheme2 .point.odd .shape svg path{  fill: #080;}
+body.scheme2 .point.even .shape svg path{ fill: #044;}
+body.scheme2 .bar {                 background: #121;}
+body.scheme2 .board{          background-color: #333;}
+body.scheme2 .cf{             background-color: #353;
+                                  border-color: #121;}
 
 /* ----------- SCHEME 3 ------------- */
-body.scheme3 .point.odd .shape{
-  border-bottom-color: #222;
-  border-top-color: #222;
-}
-
-body.scheme3 .point.even .shape{
-  border-bottom-color: #D22;
-  border-top-color: #D22;
-}
-body.scheme3 .bar {
-  background: #555;
-}
-body.scheme3 .board{
-  background-color: #333;
-}
-body.scheme3 .cf{
-  background-color: #DDD;
-  border-color: #111;
-}
+body.scheme3 .point.odd .shape svg path{  fill: #222;}
+body.scheme3 .point.even .shape svg path{ fill: #999;}
+body.scheme3 .bar {                 background: #DDD;}
+body.scheme3 .board{          background-color: #AAC;}
+body.scheme3 .cf{             background-color: #FFF;
+                                  border-color: #222;}
+                                  
 /* ----------- END COLOR SCHEMES ------------- */
 .cf.fullscreen{
   width:100%;

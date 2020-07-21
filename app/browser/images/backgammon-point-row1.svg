@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   preserveAspectRatio="none"
+   width="100%"
+   height="100%"
+   viewBox="0 0 36.285702 112.04317"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="backgammon-point-row1.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     showguides="false"
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="4"
+     inkscape:cx="-8.1422594"
+     inkscape:cy="75.360884"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1799"
+     inkscape:window-height="1058"
+     inkscape:window-x="113"
+     inkscape:window-y="1072"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-6.0393521,-5.2401967)">
+    <path
+       id="rect874"
+       style="fill:#ff0000;fill-opacity:1;stroke-width:0.264583"
+       d="m 21.579376,9.9229871 c 0.175656,-1.2135402 0.586527,-3.6816306 1.205735,-4.1980918 0.515998,-0.3509802 2.463675,-0.3339652 2.949328,-0.039411 0.599213,0.5513619 0.927559,2.9525842 1.11674,4.2648218 L 42.325053,117.28337 H 6.0393521 Z"
+       sodipodi:nodetypes="sccsccs" />
+  </g>
+</svg>

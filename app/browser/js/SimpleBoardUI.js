@@ -367,6 +367,17 @@ function SimpleBoardUI(client) {
       k = (pieceType === model.PieceType.BLACK) ? i + 12 : i;
       this.createPoint(this.fields[3], k, typeClass);
     }
+    //LOAD SVG
+    $(document).ready(function(){
+      $.get("./images/backgammon-point-row0.svg", function(data) {
+        var content = new XMLSerializer() .serializeToString(data.documentElement);
+        $(".row0 .shape").html(content);
+      });
+      $.get("./images/backgammon-point-row1.svg", function(data) {
+        var content = new XMLSerializer() .serializeToString(data.documentElement);
+        $(".row1 .shape").html(content);
+      });
+    });
   };
 
   this.createPiece = function (parentElem, piece, count) {
