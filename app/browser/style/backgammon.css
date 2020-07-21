@@ -366,7 +366,8 @@ body {
 }
 
 .bar {
-  background: #5e4733 url(../images/v-line.gif) repeat-y center center;
+  background-color: #5e4733;
+  background-image: url(../images/v-line.gif) repeat-y center center;
 }
 
 .point .shape {
@@ -383,7 +384,7 @@ body {
     /* ----------- SCHEME 1 ------------- */
 body.scheme1 .point.odd .shape svg path{  fill: #222;}
 body.scheme1 .point.even .shape svg path{ fill: #D22;}
-body.scheme1 .bar {                 background: #555;}
+body.scheme1 .bar {           background-color: #555;}
 body.scheme1 .board{          background-color: #888;}
 body.scheme1 .cf{             background-color: #DDD;
                                   border-color: #111;}
@@ -391,7 +392,7 @@ body.scheme1 .cf{             background-color: #DDD;
     /* ----------- SCHEME 2 ------------- */
 body.scheme2 .point.odd .shape svg path{  fill: #080;}
 body.scheme2 .point.even .shape svg path{ fill: #044;}
-body.scheme2 .bar {                 background: #121;}
+body.scheme2 .bar {           background-color: #121;}
 body.scheme2 .board{          background-color: #333;}
 body.scheme2 .cf{             background-color: #353;
                                   border-color: #121;}
@@ -399,7 +400,7 @@ body.scheme2 .cf{             background-color: #353;
 /* ----------- SCHEME 3 ------------- */
 body.scheme3 .point.odd .shape svg path{  fill: #222;}
 body.scheme3 .point.even .shape svg path{ fill: #999;}
-body.scheme3 .bar {                 background: #DDD;}
+body.scheme3 .bar {           background-color: #DDD;}
 body.scheme3 .board{          background-color: #AAC;}
 body.scheme3 .cf{             background-color: #FFF;
                                   border-color: #222;}
