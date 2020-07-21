@@ -377,6 +377,10 @@ function SimpleBoardUI(client) {
         var content = new XMLSerializer() .serializeToString(data.documentElement);
         $(".row1 .shape").html(content);
       });
+      $.get("./images/piece-v2.svg", function(data) {
+        var content = new XMLSerializer() .serializeToString(data.documentElement);
+        $(".piece").html(content);
+      });
     });
   };
 

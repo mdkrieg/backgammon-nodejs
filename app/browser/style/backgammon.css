@@ -102,7 +102,7 @@ html, body,
   content: '';
   display: block;
   /*margin-top: 56.25%;*/
-  padding-top: 100%;
+  /*padding-top: 100%;*/
 }
 .piece .image {
   position: absolute;
@@ -120,16 +120,19 @@ html, body,
   vertical-align: middle;
 }
 
-.friendly-piece .image:hover {
+.friendly-piece:hover {
   opacity:60%;
 }
-
+/*
 .piece .image:before {
   content: '';
   display: inline-block;
   height: 100%;
   vertical-align: middle;
-}
+}*/
+
+.piece.black svg ellipse{fill: #000;}
+.piece.white svg ellipse{fill: #DDD;}
 
 .piece span {
   vertical-align: middle;
