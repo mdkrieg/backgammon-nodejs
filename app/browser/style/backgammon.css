@@ -334,6 +334,7 @@ body {
   background-color: #ffffff;
   border: none;
   border-radius: 5px;
+  z-index:5;
 }
 
 .navbar-toggle .glyphicon {
@@ -367,8 +368,21 @@ body {
 
 .bar {
   background-color: #5e4733;
-  background-image: url(../images/v-line.gif) repeat-y center center;
 }
+
+/* this is a CSS trick to accomplish having a middle line without using an image */
+.bar:after {
+    content:"";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    border-left: 1px solid #3e2713;
+    transform: translate(-50%);
+}
+
+
 
 .point .shape {
   width: 100%;
@@ -382,9 +396,10 @@ body {
 /* ----------- BEGIN COLOR SCHEMES ------------- */
 
     /* ----------- SCHEME 1 ------------- */
-body.scheme1 .point.odd .shape svg path{  fill: #222;}
-body.scheme1 .point.even .shape svg path{ fill: #D22;}
+body.scheme1 .point.odd .shape svg path{  fill: #444;}
+body.scheme1 .point.even .shape svg path{ fill: #D44;}
 body.scheme1 .bar {           background-color: #555;}
+body.scheme1 .bar:after {border-left: 1px dashed #511;}
 body.scheme1 .board{          background-color: #888;}
 body.scheme1 .cf{             background-color: #DDD;
                                   border-color: #111;}
@@ -393,6 +408,7 @@ body.scheme1 .cf{             background-color: #DDD;
 body.scheme2 .point.odd .shape svg path{  fill: #080;}
 body.scheme2 .point.even .shape svg path{ fill: #044;}
 body.scheme2 .bar {           background-color: #121;}
+body.scheme2 .bar:after {border-left: 1px solid #052;}
 body.scheme2 .board{          background-color: #333;}
 body.scheme2 .cf{             background-color: #353;
                                   border-color: #121;}
@@ -401,6 +417,7 @@ body.scheme2 .cf{             background-color: #353;
 body.scheme3 .point.odd .shape svg path{  fill: #222;}
 body.scheme3 .point.even .shape svg path{ fill: #999;}
 body.scheme3 .bar {           background-color: #DDD;}
+body.scheme3 .bar:after {border-left: 1px solid #AAA;}
 body.scheme3 .board{          background-color: #AAC;}
 body.scheme3 .cf{             background-color: #FFF;
                                   border-color: #222;}
