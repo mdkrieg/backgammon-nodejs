@@ -55,7 +55,6 @@
     </div>
     <div id="frame-bottom" class="frame">
     </div>
-    <div style="position:absolute;top:0;right:0;margin:5px;" onclick="$('.cf').toggleClass('fullscreen');"><img style="width:40px;height:40px" src="https://upload.wikimedia.org/wikipedia/commons/d/d8/OOjs_UI_icon_fullScreen.svg"></div>
   </script>
     
   <script type="text/x-mustache" id="tmpl-rule-selector-item">
@@ -108,22 +107,29 @@
       </div>
 
       <div class="navbar-collapse">
-        <button type="button" class="btn btn-primary navbar-btn yourself" title="Your score in current match"><span id="yourself" class="player">Yourself</span><span id="yourscore" class="score badge">3</span></button>
-        <button type="button" class="btn btn-default navbar-btn opponent" title="Opponent's score in current match"><span id="oppscore" class="score badge left">3</span><span id="opponent" class="player">Opponent</span></button>
-        
-        <ul class="nav navbar-nav navbar-right">
-          <li><a id="menu-resign" href="#" title="Resign from current game"><span class="glyphicon glyphicon-flag"></span>Resign</a></li>
-          <li><a id="menu-undo" href="#" title="Undo moves made"><span class="glyphicon glyphicon-repeat"></span>Undo</a></li>
-          <li><a id="menu-close" href="#" data-toggle="collapse" data-target=".navbar" title="Close game menu"><span class="glyphicon glyphicon-remove"></span>Close</a></li>
-        </ul>
-        
-        <label style= "background-color:#DDD; color:#000; font-family:verdana;">Color Scheme: </label>
-        <select id="select-scheme" onchange="document.body.className = this.value;"> 
-          <option value="" selected>Classic</option>
-          <option value="scheme1">Greys</option>
-          <option value="scheme2">Moss</option>
-          <option value="scheme3">Martini</option>
-        </select>
+        <div class="d-inline-block" style="padding:10px;">
+          <button type="button" class="btn btn-primary navbar-btn yourself" title="Your score in current match"><span id="yourself" class="player">Yourself</span><span id="yourscore" class="score badge">3</span></button>
+          <button type="button" class="btn btn-default navbar-btn opponent" title="Opponent's score in current match"><span id="oppscore" class="score badge left">3</span><span id="opponent" class="player">Opponent</span></button>
+        </div>
+        <div class="d-inline-block" style="padding:10px;">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a id="menu-resign" href="#" title="Resign from current game"><span class="glyphicon glyphicon-flag"></span>Resign</a></li>
+            <li><a id="menu-undo" href="#" title="Undo moves made"><span class="glyphicon glyphicon-repeat"></span>Undo</a></li>
+            <li><a id="menu-close" href="#" data-toggle="collapse" data-target=".navbar" title="Close game menu"><span class="glyphicon glyphicon-remove"></span>Close</a></li>
+          </ul>
+        </div>
+        <div class="d-inline-block" style="padding:10px;float:right;">
+          <label style="background-color:#DDD; color:#000; font-family:verdana;">Color Scheme: </label>
+          <select id="select-scheme" onchange="document.body.className = this.value;"> 
+            <option value="" selected="">Classic</option>
+            <option value="scheme1">Greys</option>
+            <option value="scheme2">Moss</option>
+            <option value="scheme3">Martini</option>
+          </select>
+        </div>
+        <div style="position:absolute;top:0;right:0;margin:5px;" onclick="$('.cf').toggleClass('fullscreen');">
+          <img style="width:40px;height:40px" src="https://upload.wikimedia.org/wikipedia/commons/d/d8/OOjs_UI_icon_fullScreen.svg">
+        </div>
       </div>
     </div>
   </nav>
