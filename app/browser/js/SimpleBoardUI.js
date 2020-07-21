@@ -621,7 +621,9 @@ function SimpleBoardUI(client) {
     var yourPiece = this.client.player.currentPieceType === model.PieceType.WHITE ? 'white' : 'black';
     var oppoPiece = this.client.player.currentPieceType === model.PieceType.WHITE ? 'black' : 'white';
     $("nav.navbar .btn.yourself .piece").addClass(yourPiece);
+    $("nav.navbar .btn.yourself .piece").removeClass(oppoPiece);
     $("nav.navbar .btn.opponent .piece").addClass(oppoPiece);
+    $("nav.navbar .btn.opponent .piece").removeClass(yourPiece);
     
     console.log('Board UI updated');
     console.log('Match:', this.match);
