@@ -399,16 +399,18 @@ body {
 /* ----------- BEGIN COLOR SCHEMES ------------- */
 
     /* ----------- SCHEME 1 ------------- */
-body.scheme1 .point.odd .shape svg path{  fill: #444;}
+body.scheme1 .point.odd  .shape svg path{ fill: #444;}
 body.scheme1 .point.even .shape svg path{ fill: #D44;}
 body.scheme1 .bar {           background-color: #555;}
 body.scheme1 .bar:after {border-left: 1px dashed #511;}
 body.scheme1 .board{          background-color: #888;}
 body.scheme1 .cf{             background-color: #DDD;
                                   border-color: #111;}
+body.scheme1 .piece.black svg ellipse{fill: #500;}
+body.scheme1 .piece.white svg ellipse{fill: #DDD;}
 
     /* ----------- SCHEME 2 ------------- */
-body.scheme2 .point.odd .shape svg path{  fill: #080;}
+body.scheme2 .point.odd  .shape svg path{ fill: #080;}
 body.scheme2 .point.even .shape svg path{ fill: #044;}
 body.scheme2 .bar {           background-color: #121;}
 body.scheme2 .bar:after {border-left: 1px solid #052;}
@@ -417,7 +419,7 @@ body.scheme2 .cf{             background-color: #353;
                                   border-color: #121;}
 
 /* ----------- SCHEME 3 ------------- */
-body.scheme3 .point.odd .shape svg path{  fill: #222;}
+body.scheme3 .point.odd  .shape svg path{ fill: #222;}
 body.scheme3 .point.even .shape svg path{ fill: #999;}
 body.scheme3 .bar {           background-color: #DDD;}
 body.scheme3 .bar:after {border-left: 1px solid #AAA;}
@@ -476,51 +478,51 @@ body.scheme3 .cf{             background-color: #FFF;
 }
 
 .digit-1-white {
-  background-image: url(../images/digit-1-white.png);
+  background-image: url(../images/dice/digit-1-white.png);
 }
 
 .digit-2-white {
-  background-image: url(../images/digit-2-white.png);
+  background-image: url(../images/dice/digit-2-white.png);
 }
 
 .digit-3-white {
-  background-image: url(../images/digit-3-white.png);
+  background-image: url(../images/dice/digit-3-white.png);
 }
 
 .digit-4-white {
-  background-image: url(../images/digit-4-white.png);
+  background-image: url(../images/dice/digit-4-white.png);
 }
 
 .digit-5-white {
-  background-image: url(../images/digit-5-white.png);
+  background-image: url(../images/dice/digit-5-white.png);
 }
 
 .digit-6-white {
-  background-image: url(../images/digit-6-white.png);
+  background-image: url(../images/dice/digit-6-white.png);
 }
 
 .digit-1-black {
-  background-image: url(../images/digit-1-black.png);
+  background-image: url(../images/dice/digit-1-black.png);
 }
 
 .digit-2-black {
-  background-image: url(../images/digit-2-black.png);
+  background-image: url(../images/dice/digit-2-black.png);
 }
 
 .digit-3-black {
-  background-image: url(../images/digit-3-black.png);
+  background-image: url(../images/dice/digit-3-black.png);
 }
 
 .digit-4-black {
-  background-image: url(../images/digit-4-black.png);
+  background-image: url(../images/dice/digit-4-black.png);
 }
 
 .digit-5-black {
-  background-image: url(../images/digit-5-black.png);
+  background-image: url(../images/dice/digit-5-black.png);
 }
 
 .digit-6-black {
-  background-image: url(../images/digit-6-black.png);
+  background-image: url(../images/dice/digit-6-black.png);
 }
 
 .dice .played {
