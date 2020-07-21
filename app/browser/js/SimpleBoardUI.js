@@ -616,7 +616,13 @@ function SimpleBoardUI(client) {
     if (showDice) {
       this.updateDice(game.turnDice, game.turnPlayer.currentPieceType);
     }
-
+    
+    //colorize pieces in scoreboard
+    var yourPiece = this.client.player.currentPieceType === model.PieceType.WHITE ? 'white' : 'black';
+    var oppoPiece = this.client.player.currentPieceType === model.PieceType.WHITE ? 'black' : 'white';
+    $("nav.navbar .btn.yourself .piece").addClass(yourPiece);
+    $("nav.navbar .btn.opponent .piece").addClass(oppoPiece);
+    
     console.log('Board UI updated');
     console.log('Match:', this.match);
     console.log('Game:', game);

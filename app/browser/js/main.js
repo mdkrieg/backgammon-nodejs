@@ -96,8 +96,6 @@ function App() {
       var ruleName = this._config.selectableRules[i];
       var rule = this.loadRule(ruleName);
       var isSelected = rule.isDefault;
-      console.log('--------------rule---------------');
-      console.log(rule);
       var isActive = isSelected ? 'active' : '';
       var isChecked = isSelected ? 'checked' : '';
 
