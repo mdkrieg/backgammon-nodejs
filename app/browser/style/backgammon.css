@@ -406,8 +406,8 @@ body.scheme1 .bar:after {border-left: 1px dashed #511;}
 body.scheme1 .board{          background-color: #888;}
 body.scheme1 .cf{             background-color: #DDD;
                                   border-color: #111;}
-body.scheme1 .piece.black svg ellipse{fill: #500;}
-body.scheme1 .piece.white svg ellipse{fill: #DDD;}
+body.scheme1 .piece.black svg ellipse{    fill: #500;}
+body.scheme1 .piece.white svg ellipse{    fill: #DDD;}
 
     /* ----------- SCHEME 2 ------------- */
 body.scheme2 .point.odd  .shape svg path{ fill: #080;}
@@ -417,6 +417,8 @@ body.scheme2 .bar:after {border-left: 1px solid #052;}
 body.scheme2 .board{          background-color: #333;}
 body.scheme2 .cf{             background-color: #353;
                                   border-color: #121;}
+body.scheme2 .piece.black svg ellipse{    fill: #021;}
+body.scheme2 .piece.white svg ellipse{    fill: #8FB;}
 
 /* ----------- SCHEME 3 ------------- */
 body.scheme3 .point.odd  .shape svg path{ fill: #222;}
@@ -426,6 +428,8 @@ body.scheme3 .bar:after {border-left: 1px solid #AAA;}
 body.scheme3 .board{          background-color: #AAC;}
 body.scheme3 .cf{             background-color: #FFF;
                                   border-color: #222;}
+body.scheme3.piece.black svg ellipse{     fill: #000;}
+body.scheme3.piece.white svg ellipse{     fill: #DDD;}
                                   
 /* ----------- END COLOR SCHEMES ------------- */
 .cf.fullscreen{
