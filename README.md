@@ -1,12 +1,15 @@
 # MDKrieg fork
 07/13/2020
 
+Live Demo - http://matt-gammon.herokuapp.com/
+
 ## Intended additions
 - Implement different board theme
     - I like this one from codepen: https://codepen.io/AdventureBear/pen/wBNaBP
     - Saved in app/browser/css3-backgammon-board
 - Customize and polish UI
-    - Hover style on clickable items
+    - DONE - Hover style on clickable items
+    - DONE - Add different color themes
     - Show move hints
     - Add screenshots to rule selector buttons
     - Update move mechanic to click-on-destination
